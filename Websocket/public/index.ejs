@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Form</h1>
+    <form action="" id="mensaje" onsubmit="return addMessages(this)">
+        <label for="" >producto</label>
+        <input type="text" id="produc" name="" placeholder="producto"  required>
+        <label for="">precio</label>
+        <input type="number" id="price" name="" placeholder="precio"  required>
+        <label for="">imagen</label>
+        <input type="text"  id="imag" placeholder="imagen" name="" required>
+        <button type="submit" >enviar</button>
+    </form>
+    <section>
+    <h1 style="color: cornflowerblue;">Tabla de Productos</h1>
+    <div class="tabla">
+        <table style="justify-content: center;">
+            <tr>
+                <th>producto</th>
+                <th>precio</th>
+                <th>imagen</th>
+            </tr> 
+            <tr>
+                <% info.forEach(function(info) { %>
+                <td><%= info.producto %></td>
+                <td><%= info.precio %></td>
+                <td><img src="<%= info.imagen %>" alt="" ></td>
+            </tr>
+            <% }) %>
+        </table>
+        </div>
+        </section>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js"></script> 
+</body>
+</html>

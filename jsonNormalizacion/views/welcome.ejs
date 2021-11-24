@@ -1,0 +1,19 @@
+<html lang="en">
+    <head>
+        <title>Welcome</title>
+        <link rel="stylesheet" href="../public/styles.css">
+    </head>
+    <body>
+        <div class="welcome">
+            <h4>
+                Hi <% if(user) {  %>
+               <%= user.email %>
+
+              <%  }%>, you are welcome here
+                </h4>
+                <div>
+                    <button class="button-logout" type="submit" value="logout"><a href="/logout">logout</a></button>
+                </div>
+            </div>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+section{
+    margin: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.tabla{
+    width: 60%;
+    display: flex;
+    border: 1px solid #000;
+    background-color: #161a1d;
+    justify-content: center;
+
+}
+
+
+
+th,td{
+    color: #f8f9fa ;
+    padding: 10px;
+    width: 30vw;
+    border-bottom: 1px solid #000;
+    border-spacing: 0;
+    border-collapse: unset;
+    text-align: center;
+}
+
+
+
+img{
+    width: 60px;
+    height: auto;
+}

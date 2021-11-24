@@ -1,0 +1,39 @@
+.page-section{
+    text-align: center;
+}
+
+h1{
+    color: green;
+}
+
+p{
+    font-size: 19px;
+}
+
+input {
+    margin: 3px;
+    padding: 4px;
+}
+
+button {
+    padding: 8px;
+    background-color: rgb(57, 155, 221);
+    color: azure;
+    border: 3px;
+    margin: 9px 80px;
+}
+
+table{
+    border: 2px solid cornflowerblue;
+    padding: 10px;
+}
+
+th,td{
+    border: 2px solid cornflowerblue;
+    padding: 9px;
+}
+
+img{
+    width: 70px;
+    height: auto;
+}

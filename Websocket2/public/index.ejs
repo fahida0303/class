@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chat con websocket</h1>
+    <div id="messages"></div>
+    <br>
+    <form action="" onsubmit="return addMessage(this)">
+        <input  type="email" id="username" name="" placeholder="email"  required>
+        <input type="text" id="text" name="" placeholder="chat"  required>
+        <button type="submit" >enviar</button>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js"></script> 
+</body>
+</html>

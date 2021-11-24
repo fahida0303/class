@@ -1,0 +1,17 @@
+[
+    {
+    "producto": "calculadora",
+     "precio": 123.45,
+     "imagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-128.png"
+},
+{
+    "producto": "libro",
+     "precio": 123.45,
+     "imagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/book-note-paper-school-512.png"
+},
+{
+    "producto": "lapiz",
+     "precio": 123.45,
+     "imagen": "https://cdn3.iconfinder.com/data/icons/education-209/64/pencil-pen-stationery-school-512.png"
+}
+]

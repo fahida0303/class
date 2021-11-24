@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Normalización</title>
+</head>
+
+<body>
+
+    <h1>JSON Normalización</h1>
+    <p id="messages"></p>
+    <br>
+    <form action="" onsubmit="return addMessage(this)">
+        <input id="username" type="name" placeholder="Nombre"><br>
+        <input id="text" type="text" placeholder="Deja tu mensaje"><br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        let socket = io();
+
+        socket.on('messages', data => {
+            console.log(data);
+            render(data);
+        })
+
+        function render(data) {
+
+            let html = data.map(function (elem, index) {
+                return (`
+                            <div>
+                            <strong>${elem.author}</strong>:
+                            <em>${elem.text}</em>
+                            </div>`)
+            }).join(" ");
+            document.querySelector('#messages').innerHTML = html;
+        }
+
+
+        socket.on("messages", (data) => {
+            render(data)
+        })
+
+        function addMessage(e) {
+            let _id = 0;
+            let mensaje = {
+                id: _id.length,
+                author: document.getElementById('username').value,
+                text: document.getElementById('text').value
+            };
+            socket.emit('new-message', mensaje);
+            return false;
+        }
+    </script>
+</body>
+
+</html>
