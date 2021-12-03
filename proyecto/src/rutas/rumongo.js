@@ -1,29 +1,33 @@
-const mongoose = require('mongoose')
-const mongo = require('../modelos/mongo');
-const express = require('express');
+import mongoose from 'mongoose';
+import express from 'express';
+const mongo = require('../data/mongo');
 
 const router = express.Router();
 
 
-router.get('/car',(req,res) =>{
-    const newproducto = new productos_Sc(req.body);
-    res.send(newproducto);
+
+
+
+router.get('/list_cars',(req,res) =>{
+    const cars = req.body;
+    res.send(cars);
 })
 
 
-router.post('/new_car', (req,res) =>{
-    const product = req.body;
-   const newproducto = new mongo(req.body);
-    newproducto.save();
-    res.json(product)
+router.post('/new_cars/:id', (req,res) =>{
+    const cars = req.body;
+    const newcars  = new mongo({cars});
+    newcars.save();
+res.json(cars)
 })
+
 
 
 router.put('/correct_car/:id', (req, res) =>{
-    const product = req.body;
-    const newproducto = new mongo(req.body);
-     newproducto.save();
-     res.json(product)
+    const cars = req.body;
+    const newcars= new mongo(req.body);
+     newcars.save();
+     res.json(newcars)
 })
 
 router.delete('/dele/:id', (req,res) =>{
