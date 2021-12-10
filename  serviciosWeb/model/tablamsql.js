@@ -3,7 +3,7 @@ const { option } = require('../data/db')
 const knex = require('knex')(option);
 
 
-async function getProductos() {
+async function getProducts() {
     try {
         await knex.schema.createTable('products', table => {
             table.increments('id').notNullable();
@@ -21,5 +21,5 @@ async function getProductos() {
 }
 
 module.exports = {
-    getProductos
+    getProducts
 }    

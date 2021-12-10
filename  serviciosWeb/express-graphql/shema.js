@@ -22,6 +22,6 @@ type Query{
 
 
 export default makeExecutableSchema({
-    typeDefs: typeDefs,
-    resolve: resolvers
+    typeDefs,
+    resolvers
 })
