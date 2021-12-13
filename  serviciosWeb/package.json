@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "babel-node app.mjs",
+    "dev": "babel-node app.js",
     "start": "nodemon --exec npm run dev",
-    "test": "node test/product-test.mjs"
+    "test": "mocha test/*.test.js"
   },
   "dependencies": {
     "@graphql-tools/schema": "^8.3.1",
@@ -20,11 +20,13 @@
     "knex": "^0.95.14",
     "mysql": "^2.18.1",
     "pug": "2.0.0-beta11",
-    "reqquest": "^0.0.1-security"
+    "reqquest": "^0.0.1-security",
+    "webpack": "^5.65.0"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/node": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
     "chai": "^4.3.4",
     "chai-http": "^4.3.0",
     "mocha": "^9.1.3",

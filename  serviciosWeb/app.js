@@ -1,10 +1,10 @@
-const createError = require('http-errors');
-const express = require('express');
-const path = require('path');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
-//const indexRouter = require('./routes/index');
-const products = require('./routes/product');
+import createError from 'http-errors';
+import express  from 'express';
+import path from 'path';
+import cookieParser from 'cookie-parser';
+
+
+//const product = require('./routes/product')
 
 const app = express();
 
@@ -13,14 +13,15 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 
+const product = require('./routes/product')
 
-app.use(logger('dev'));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/products', products);
+app.use('/products', product);
 //app.use('/users', usersRouter);
 
 

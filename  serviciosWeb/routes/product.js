@@ -1,9 +1,8 @@
-
-const  {option} = require("../data/db");
-const knex = require("knex")(option);
- const express = require('express');
- const {graphqlHTTP} = require("express-graphql");
- const schema =  require('../express-graphql/shema');
+import  {option} from "../data/db";
+import express from 'express';
+import {graphqlHTTP} from "express-graphql";
+import  schema from '../express-graphql/shema';
+const  knex = require("knex")(option);
 
 const router = express.Router();
 
@@ -19,7 +18,7 @@ router.use('/grhpql', graphqlHTTP({
     graphiql: true
 }));
 
-router.get('/list_products/:id',(req,res) =>{
+router.get('/list_products',(req,res) =>{
     knex('productos').select('*').then( data => {
         res.json(data)
     })
