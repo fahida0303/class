@@ -1,4 +1,4 @@
-const products = require('../model/tablamsql')
+const products = require('../../model/tablamsql')
 export const  resolvers = {
     Query:{
         createProducts({input}) { const newProducts = new products(input)

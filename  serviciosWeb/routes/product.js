@@ -1,7 +1,7 @@
-import  {option} from "../data/db";
+import  {option} from "../model/products";
 import express from 'express';
 import {graphqlHTTP} from "express-graphql";
-import  schema from '../express-graphql/shema';
+import  schema from '../controller/express-graphql/shema';
 const  knex = require("knex")(option);
 
 const router = express.Router();
