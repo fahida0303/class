@@ -3,6 +3,9 @@ import express from 'express';
 import {graphqlHTTP} from "express-graphql";
 import  schema from '../controller/express-graphql/shema';
 const  knex = require("knex")(option);
+import ProductosDaoDB from './dao/productosDaoDB.js'
+import DTO from './dto/productos.js'
+
 
 const router = express.Router();
 
