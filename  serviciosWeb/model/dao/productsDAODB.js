@@ -1,7 +1,7 @@
 import ProductosDao from './productsDAO';
-import { products } from '../model/tablamsql';
-import productsMysql from '../data/ProductMysql';
-import products from '../model/products';
+import { products } from '../tablamsql';
+import productsMysql from '../../data/ProductMysql';
+import products from '../products';
 import CustomError from './productsDAO';
 
 

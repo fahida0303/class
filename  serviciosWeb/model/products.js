@@ -1,4 +1,4 @@
-import {persistenciaMemory} from '../data/productMemory';
+import {persistenciaMemory} from './data/productMemory';
 import {persistenciaMsql} from '../model/tablamsql';
 
 class FactoryProductsModel {
